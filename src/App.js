@@ -11,8 +11,8 @@ class App extends Component {
     llamas,
     clickedLlamaIds: [],
     score: 0,
-    goal: 8,
-    status: ""
+    goal: 10,
+    status: "Click on any image to begin!"
   };
 
   //shuffle the llama cards in the browser when clicked
@@ -23,15 +23,15 @@ class App extends Component {
       this.setState({ clickedLlamaIds: [], score: 0, status:  "Game Over! You lost. Click to play again!" });
       return;
     }else{
-      clickedLlamaIds.push(id)
-
+      clickedLlamaIds.push(id) 
+      
       if(clickedLlamaIds.length === 8){
         this.setState({score: 8, status: "You Won! Great Job, Smartie! Click to play again!", clickedLlamaIds: []});
         console.log('You Win');
         return;
       }
 
-      this.setState({ llamas, clickedLlamaIds, score: clickedLlamaIds.length, status: " " });
+      this.setState({ llamas, clickedLlamaIds, score: clickedLlamaIds.length, status: "You Guessed Correctly!!"});
 
       for (let i = llamas.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -51,7 +51,7 @@ class App extends Component {
           </p>
         </header>
         <Score total={this.state.score}
-               goal={8}
+               goal={10}
                status={this.state.status}
                />
         <Wrapper>
