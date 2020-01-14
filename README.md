@@ -5,7 +5,7 @@ This is a simple memorization and click game. The object of the game is to click
 
 ## How to Play
 
-* Open the app/game:[NoDramaLlama] (https://afternoon-bastion-34117.herokuapp.com/)
+* Open the app/game: [NoDramaLlama](https://afternoon-bastion-34117.herokuapp.com/)
 * Click on any llama tile you desire
 * The tiles will all reshuffle themselves
 * Click on another llama, but REMEMBER that you can only click on a llama once.
